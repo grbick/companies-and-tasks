@@ -1,0 +1,63 @@
+{
+  "companies": [
+    {
+      "id": 1,
+      "name": "factory",
+      "owner": "likic",
+      "active_from": "01.01.1990.",
+      "email": "factory@factoryww.com",
+      "city": "belgrade",
+      "address": "mihajla pupina 115a"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "admin",
+      "last_name": "admin",
+      "email": "admin@admin.com",
+      "password": "admin",
+      "date_of_birth": "02.02.1909.",
+      "role": 0
+    },
+    {
+      "id": 2,
+      "name": "shift",
+      "last_name": "shift",
+      "email": "shift@shift.com",
+      "password": "shift",
+      "date_of_birth": "02.02.1909.",
+      "role": 1,
+      "company": "factory",
+      "companyId": 1,
+      "pending_tasks": [
+        {
+          "from": "neko vreme",
+          "to": "neko vreme",
+          "description": "neki task",
+          "employeeId": 3
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "employee",
+      "last_name": "employee",
+      "email": "employee@employee.com",
+      "password": "employee",
+      "date_of_birth": "02.02.1909.",
+      "role": 2,
+      "company": "factory",
+      "companyId": 1,
+      "salary": 15,
+      "working_hours": 57,
+      "tasks": [
+        {
+          "from": "neko vreme",
+          "to": "neko vreme",
+          "description": "neki task"
+        }
+      ]
+    }
+  ]
+}
