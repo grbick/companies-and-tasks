@@ -13,6 +13,7 @@ export type User = {
   tasks?: Task[];
   pendingTasks?: Task[];
 };
+
 export type Task = {
   from: Date | string;
   to: Date | string;
