@@ -4,7 +4,6 @@ import { userService } from "../../modules/users/users.service";
 import { localStorageService } from "../../utils/localStorageService";
 import { UserContext } from "../../modules/users/users.context";
 import { sessionStorageService } from "../../utils/sessionStorageService";
-// import { User } from "../../modules/users/users.types";
 import "./LogInPage.scss";
 
 import { Button, Checkbox, Form, Input } from "antd";
@@ -35,18 +34,6 @@ const LogInPage = () => {
         sessionStorageService.set("user", response);
       }
     }
-
-    // .then((response: User) => {
-    //   setIsLoggedIn(true);
-    //   if (values.remember) {
-    //     localStorageService.set("user", response);
-    //     setUserInfo(response);
-    //   } else {
-    //     setUserInfo(response);
-    //     sessionStorageService.set("user", response);
-    //   }
-    // })
-    // .catch((e) => alert(e.message));
   };
 
   return (
