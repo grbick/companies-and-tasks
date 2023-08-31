@@ -8,8 +8,8 @@ export type User = {
   role: number;
   company?: string;
   companyId?: number;
-  salary: number;
-  workingHours: number;
+  salary?: number;
+  workingHours?: number;
   tasks?: Task[];
   pendingTasks?: Task[];
 };

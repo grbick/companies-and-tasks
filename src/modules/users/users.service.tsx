@@ -1,6 +1,7 @@
 import { localStorageService } from "../../utils/localStorageService";
 import { sessionStorageService } from "../../utils/sessionStorageService";
 import { userRepo } from "./users.repo";
+import { User } from "./users.types";
 
 class UserService {
   getUsers = (params: any) => {
@@ -12,12 +13,12 @@ class UserService {
 
   checkIfUserExists = (users: [], name: string, password: string) => {
     return users.find(
-      (user: any) => user.name === name && user.password === password
+      (user: User) => user.name === name && user.password === password
     );
   };
   returnUser = (users: [], name: string, password: string) => {
     return users.filter(
-      (user: any) => user.name === name && user.password === password
+      (user: User) => user.name === name && user.password === password
     )[0];
   };
   checkCredentials = async (name: string, password: string) => {
@@ -33,6 +34,11 @@ class UserService {
     : this.sessionUser
     ? this.sessionUser
     : null;
+  initialUserBoolean: boolean = this.localUser
+    ? true
+    : this.sessionUser
+    ? true
+    : false;
 }
 
 export const userService = new UserService();

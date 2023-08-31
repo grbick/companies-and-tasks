@@ -16,7 +16,9 @@ type UserProviderProps = {
 export const UserContext = createContext<userContextType>(null as any);
 
 export const UserProvider = ({ children }: UserProviderProps) => {
-  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
+    userService.initialUser
+  );
   const [userInfo, setUserInfo] = useState<User>(userService.initialUser);
 
   return (
